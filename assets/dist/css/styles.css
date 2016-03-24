@@ -1821,24 +1821,6 @@ width: 111rem;
   background-color: rgba(89, 137, 168, 1.0);
 }
 
-@define-mixin transition {
-  -webkit-transition: ;
-  transition: ;
-}
-
-html {
-  font-family: sans-serif;
-}
-
-h1 {
-  color: rgba(89, 137, 168, 1.0);
-}
-
-section {
-  width: 100%;
-  float: left;
-}
-
 .masonry-sizer {
   margin-right: 1.5rem;
 }

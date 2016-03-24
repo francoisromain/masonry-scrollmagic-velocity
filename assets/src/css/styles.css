@@ -1,3 +1,12 @@
 @import "settings.css";
 @import "structure.css";
-@import "theme.css";
+
+.masonry-sizer {
+  margin-right: var(--structure-gutter)rem;
+}
+
+.masonry .bloc {
+  border-top-style: solid;
+  border-color: var(--color-brand);
+  opacity: 0;
+}
