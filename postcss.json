@@ -1,0 +1,15 @@
+{
+    "use": [
+        "postcss-import",
+        "postcss-custom-properties",
+        "postcss-calc",
+        "postcss-simple-vars",
+        "postcss-structure",
+        "postcss-cssnext"
+    ],
+    "input": "./assets/src/css/styles.css",
+    "output": "./assets/dist/css/styles.css",
+    "postcss-cssnext": {
+        "browsers": "> 1%"
+    }
+}

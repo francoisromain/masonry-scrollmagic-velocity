@@ -1,0 +1,41 @@
+{
+  "name": "test-masonry-scrollmagic-velocity",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.html",
+  "author": "François Romain",
+  "license": "ISC",
+  "scripts": {
+    "dev": "NODE_ENV=dev webpack --progress --colors --watch",
+    "dist-js": "NODE_ENV=prod webpack",
+    "css": "mkdir -p assets/dist/css/ && postcss -c postcss.json",
+    "clean": "rm -rf assets/dist",
+    "dist": "npm run clean && npm run dist-js && npm run css",
+    "watch": "onchange 'assets/src/**/*.*' 'index.html' -- npm run css",
+    "reload": "liveReload assets/dist/",
+    "w": "npm-run-all --parallel watch reload"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^1.1.1",
+    "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-react": "^4.2.3",
+    "imagesloaded": "latest",
+    "imports-loader": "^0.6.5",
+    "livereload": "^0.4.1",
+    "masonry-layout": "latest",
+    "npm-run-all": "^1.6.0",
+    "onchange": "^2.1.2",
+    "postcss-cli": "^2.5.1",
+    "postcss-loader": "^0.8.2",
+    "postcss-simple-vars": "^1.2.0",
+    "scrollmagic": "^2.0.5",
+    "structure.css": "^0.1.21",
+    "velocity-animate": "latest",
+    "webpack": "^1.12.14",
+    "webpack-livereload-plugin": "^0.7.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb/legacy"
+  }
+}

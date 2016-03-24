@@ -1,0 +1,139 @@
+/*
+    Settings
+------------------------------- 
+
+*/
+
+/*
+    Debug trick 
+------------------------------- 
+    http://qr.ae/ROqymT
+*/
+
+
+/* * { background-color: rgba(255,0,0,.2); }
+ * * { background-color: rgba(0,255,0,.2); }
+ * * * { background-color: rgba(0,0,255,.2); }
+ * * * * { background-color: rgba(255,0,255,.2); }
+ * * * * * { background-color: rgba(0,255,255,.2); }
+ * * * * * * { background-color: rgba(255,255,0,.2); }*/
+
+
+:root {
+ 
+  --base-font-size:           1rem;
+  --base-baseline:            1.5rem;
+
+/*
+    Colors
+------------------------------- 
+*/
+
+  --color-text:                rgba(91, 96, 91, 1.0);
+  --color-bg:                  white;
+  --color-transparent:         rgba(248, 247, 243, 0);
+  --color-inverse:             #5C605C;
+  --color-neutral:             #bcb9af;
+  --color-alt:                 #f8f7f3;
+  --color-brand:               rgba(89, 137, 168, 1.0);
+  --color-error:               #E82239;
+  --color-warning:             #FF891C; 
+  --color-info:                #5798AA; 
+  --color-success:             #6EA040; 
+
+/*
+    Spacing
+------------------------------- 
+*/
+
+  --base-unit:                 var(--base-baseline);                
+  --base-unit-line:            calc(var(--base-baseline) / 24);     
+  --base-unit-xxs:             calc(var(--base-baseline) / 6);      
+  --base-unit-xs:              calc(var(--base-baseline) / 3);      
+  --base-unit-s:               calc(var(--base-baseline) / 2);      
+  --base-unit-m:               calc(var(--base-baseline) * 2/3);    
+  --base-unit-l:               calc(var(--base-baseline) * 4/3);    
+  --base-unit-xl:              calc(var(--base-baseline) * 2);      
+  --base-unit-xxl:             calc(var(--base-baseline) * 2.5);    
+
+/*
+    Text sizes
+------------------------------- 
+
+*/
+
+  --text-xs:         calc(5/8)rem;  --baseline-xs:         calc(var(--base-baseline) / 2);  
+  --text-s:          calc(3/4)rem;  --baseline-s:          var(--base-baseline);            
+  --text-m:          calc(1)rem;    --baseline-m:          var(--base-baseline);            
+  --text-l:          calc(1.25)rem; --baseline-l:          var(--base-baseline);           
+  --text-xl:         calc(1.5)rem;  --baseline-xl:         var(--base-baseline);            
+  --text-xxl:        calc(3)rem;    --baseline-xxl:        calc(var(--base-baseline) * 1.5);
+  --text-lead:       var(--text-l); --baseline-lead:       var(--baseline-l);               
+  --text-blockquote: var(--text-l); --baseline-blockquote: var(--baseline-l);               
+
+/*
+    Buttons
+------------------------------- 
+*/
+
+  --btn-radius:                  var(--base-unit-xs);
+  
+  --btn-color:                   var(--color-brand);
+  --btn-color-bg:                var(--color-transparent);
+  --btn-color-active:            var(--color-alt);
+  --btn-color-bg-active:         var(--color-brand);
+  
+  --btn-alt-color:               var(--color-bg);
+  --btn-alt-color-bg:            var(--color-neutral);
+  --btn-alt-color-active:        var(--color-bg);
+  --btn-alt-color-bg-active:     var(--color-brand);
+  
+  --btn-flash-color:             var(--color-bg);
+  --btn-flash-color-bg:          var(--color-brand);
+  --btn-flash-color-active:      var(--color-bg);
+  --btn-flash-color-bg-active:   var(--color-inverse);
+  
+  --btn-b-width:                 var(--base-unit-line);
+  --btn-b-style:                 solid;
+  --btn-b-color:                 var(--color-text);
+  --btn-b-color-bg:              var(--color-bg);
+  --btn-b-color-border:          var(--color-alt);
+  --btn-b-color-active:          var(--color-inverse);
+  --btn-b-color-bg-active:       var(--color-bg);
+  --btn-b-color-border-active:   var(--color-inverse);
+
+
+/*
+    Lists
+------------------------------- 
+*/   
+
+  --list-postfix: ",";
+  --list-prefix: "―";
+
+/*
+    Grid
+------------------------------- 
+
+  for (col = min; col <= max; col ++) {
+    containerWidth = (width * col) - gutter + (padding * 2);
+  }
+
+*/
+
+  --structure-width:    18.75; 
+  --structure-gutter:   1.5;
+  --structure-padding:  1.5;
+  --structure-max:      6;
+  --structure-min:      2;
+  --structure-thumb:    3;
+  --structure-display:  "float";
+  --structure-align:    "center";
+  --structure-columns:  1;
+  --structure-blocs:    1;
+
+  --transition: opacity 1.5s, background-color 1.5s;
+  --pad:    1rem;
+  --transition-all: all 0.4s ease-in-out;
+
+}

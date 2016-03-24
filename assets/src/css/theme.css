@@ -1,0 +1,26 @@
+@define-mixin transition {
+  transition: ;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: var(--color-brand);
+}
+
+section {
+  width: 100%;
+  float: left;
+}
+
+.masonry-sizer {
+  margin-right: var(--structure-gutter)rem;
+}
+
+.masonry .bloc {
+  border-top-style: solid;
+  border-color: var(--color-brand);
+  opacity: 0;
+}
