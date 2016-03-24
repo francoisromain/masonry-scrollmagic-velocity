@@ -1,4 +1,4 @@
-# Attempt to use Masonry, ScrollMagic and Velocity together
+#Masonry, ScrollMagic and Velocity together
 
 http://francoisromain.github.io/masonry-scrollmagic-velocity/
 
