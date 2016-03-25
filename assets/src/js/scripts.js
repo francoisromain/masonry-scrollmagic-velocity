@@ -14,7 +14,7 @@ var imagesLoaded = require('imagesloaded');
   var makeGrid = function makeGrid(gridEl, n) {
     /*
     gridEl: html element to apply masonry
-    n: index (if multiple masonry are on the page)
+    n: masonry index (if multiple masonry)
     */
     // make an instance of masonry (grid.js)
     grids[n] = new Grid(gridEl, masonryItemSelector, breakpoint, scrollPage, n);
@@ -26,7 +26,7 @@ var imagesLoaded = require('imagesloaded');
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function timer() {
       for (n = 0; n < gridEls.length; n++) {
-        // create or reset masonry (grid.js)
+        // create or reset each masonry instance
         // depending on size screen
         grids[n].make();
       }
@@ -35,9 +35,10 @@ var imagesLoaded = require('imagesloaded');
 
   for (i = 0; i < gridEls.length; i++) {
     // loop over each element on which masonry is applied
-    imagesLoaded(gridEls[i], { i: i }, function cb(instance) {
+    imagesLoaded(gridEls[i], { n: i }, function cb(instance) {
       // check that images are loaded
-      makeGrid(gridEls[instance.options.i], instance.options.i);
+      // pass the index as an option
+      makeGrid(gridEls[instance.options.n], instance.options.n);
     });
   }
 

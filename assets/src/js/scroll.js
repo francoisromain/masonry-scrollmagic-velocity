@@ -20,7 +20,7 @@ myScroll.prototype = {
   blocCreate: function blocCreate(blocEl, n, i) {
     /*
     blocEl: item to animate and trigger animation
-    n: index (if multiple masonry are on the page)
+    n: masonry index (if multiple masonry)
     i: item index
     */
     // create a scene and store in an object
@@ -37,8 +37,7 @@ myScroll.prototype = {
     }, {
       duration: 800,
       easing: 'easeOutExpo'
-    })
-    ;
+    });
     this.blocAdd(n, i);
   },
   blocAdd: function blocAdd(n, i) {
@@ -48,7 +47,7 @@ myScroll.prototype = {
     /*
     gridEl: html element on which is a masonry instance
     itemSelector: css selector of masonry items
-    n: index (if multiple masonry are on the page)
+    n: masonry index (if multiple masonry)
     */
     var i;
     var borderTop = '300px';
@@ -68,10 +67,14 @@ myScroll.prototype = {
     var i;
     console.log('scroll:blocsDestroy');
     for (n in this.blocScroll) {
-      console.log('n: ', n);
-      for (i in this.blocScroll[n]) {
-        console.log('i: ', i);
-        this.blocScroll[n][i].destroy(true);
+      if (this.blocScroll.hasOwnProperty(n)) {
+        console.log('n: ', n);
+        for (i in this.blocScroll[n]) {
+          if (this.blocScroll[n].hasOwnProperty(i)) {
+            console.log('i: ', i);
+            this.blocScroll[n][i].destroy(true);
+          }
+        }
       }
     }
     // alternative: destroy the controller

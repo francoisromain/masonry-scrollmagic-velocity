@@ -3,10 +3,10 @@ var Masonry = require('masonry-layout');
 var Grid = module.exports = function Grid(gridEl, itemSelector, breakpoint, scroll, n) {
   /*
   gridEl: html element to build masonry
-  itemSelector: css selector of the item for masonry
-  breakpoint: breakpoint to destroy masonry
+  itemSelector: css selector of masonry items
+  breakpoint: to make / destroy masonry
   scroll: scrollMagic controller instance
-  n: index (if masonry is call multiple time on the page)
+  n: masonry index (if multiple masonry)
   */
 
   this.el = gridEl;
@@ -57,7 +57,7 @@ Grid.prototype = {
       this.isActive = false;
     }
 
-    // call makeBLocs on the scrollMagic controller
+    // call blocsMake on the scrollMagic controller
     this.scroll.blocsMake(this.el, this.itemSelector, this.n);
   }
 };
